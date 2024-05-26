@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- heading -->
+        <heading>
+            <h1>WEATHER APP</h1>
+        </heading>
+
+        <!-- page selector container -->
+        <div tab_container class="tab_container">
+            <h4 user_weather class="tab">
+                Your Weather
+            </h4>
+            <h4 search_weather class="tab">
+                Search Weather
+            </h4>
+        </div>
+
+        <!-- grant location part -->
+        <div grant_location_container class="grant_location_container local_container">
+            <img src="assets/location.png" height="100" width="100" >
+            <h3>Grant location Access</h3>
+            <p>Allow access to get weather information</p>
+            <button Grant_access_btn class="Grant_access_btn btn">GRANT ACCESS</button>
+        </div>
+
+        <!-- weather container -->
+        <div weather-container>
+            <!-- other city search weather part -->
+            <div search_weather_page class="local_container search_weather_page">
+                <form form_search class="form_container">
+                    <input type="text" placeholder="Search My City..." search_form_city>
+                    <button type="submit" class="btn">
+                        <img src="assets/search.png" type="submit" height="20" width="20">
+                    </button>
+                </form>
+            </div>
+
+            <!-- loading part -->
+            <div loading_page class="local_container loading_page">
+                <img src="assets/loading.gif" height="200" width="200" loading="lazy">
+                <h3>LOADING</h3>
+            </div>
+
+            
+            <!-- weather details part -->
+            <div weather_details class="weather_details local_container">
+                <div weather_location class="weather_location">
+                    <div city_location class="city_location"></div>
+                    <img country_image class="country_image">
+                </div>
+
+                <div data_weather class="data_weather"></div>
+                <img  weather_icon class="weather_icon">
+                <div weather_temp class="weather_temp"></div>
+
+                <div weather_blocks class="weather_blocks">
+                    <div weather_wind class="weather_wind weather_blocks_data">
+                        <img src="assets/wind.png" >
+                        <p>WINDSPEED</p>
+                        <p wind_data></p>
+                    </div>
+
+                    <div weather_humidity class="weather_humidity weather_blocks_data">
+                        <img src="assets/humidity.png">
+                        <p>HUMIDITY</p>
+                        <p humidity_data></p>
+                    </div>
+
+                    <div weather_clouds class="weather_clouds weather_blocks_data">
+                        <img src="assets/cloud.png">
+                        <p>CLOUDS</p>
+                        <p clouds_data></p>
+                    </div>
+                </div> 
+            </div>
+            <div class="error_not_found local_container">
+                <img src="assets/not-found.png" width="300px" height="300px">
+                <div>City not found</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
